@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="jquery.min.js"></script>
+
+    <script src="jquery.easing.min.js"></script>
+</head>
+<style>
+    div{width:50px;height:50px;background: red;position:absolute;left: 0;top:200px;}
+</style>
+<body>
+<script>
+    $(function () {
+        $("#ddd").click(function () {
+var left=500;
+            $("#dd").animate({'left':left+'px'},300,'easeOutBounce')
+        })
+    })
+</script>
+
+<input id="ddd" type="button"value="dianwo">
+<div id="dd"></div>
+</body>
+</html>

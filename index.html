@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 引入 Bootstrap -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 Shiv 和 Respond.js 用于让 IE8 支持 HTML5元素和媒体查询 -->
+    <!-- 注意： 如果通过 file://  引入 Respond.js 文件，则该文件无法起效果 -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+    <script src="jquery.min.js"></script>
+    <script src="jquery.easing.min.js"></script>
+
+
+</head>
+<link rel="stylesheet" href="index.css">
+<body>
+
+<!--标题栏-->
+<div id="header_container">
+    <header>
+        <a href=""><img id="logo" src="./image/logo.png"></a>
+        <ul id="menu">
+            <li id="menu1" class="mmm">
+                <a id="menu11" href="">店铺管理&nbsp;<span class="caret"></span></a>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                    <li><a href="#">收银记账</a></li>
+                    <li><a href="#">商品管理</a></li>
+                    <li><a href="#">会员管理</a></li>
+                    <li><a href="#">连锁店管理</a></li>
+                </ul>
+            </li>
+            <li class="mmm">
+                <a href="">会员营销&nbsp;<span class="caret"></span></a>
+                <ul style='left:275px'class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                    <li><a href="#">短信营销</a></li>
+                    <li><a href="#">微信营销</a></li>
+                    <li><a href="#">手机橱窗</a></li>
+                    <li><a href="#">优惠券</a></li>
+                </ul>
+            </li>
+            <li class="mmm">
+                <a href="">解决方案&nbsp;<span class="caret"></span></a>
+                <ul style='left:375px'class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                    <li><a href="#">服装行业解决方案</a></li>
+                    <li><a href="#">母婴行业解决方案</a></li>
+                    <li><a href="#">连锁解决方案</a></li>
+                    <li><a href="#">商家扫码收款解决方案</a></li>
+                </ul>
+            </li>
+            <li><a href="">价格资费</a></li>
+            <li id="menu5"><a href="">免费下载</a></li>
+        </ul>
+        <!--tab1-->
+
+
+        <div id="lore">
+            <a class='lore1'href="">注册</a>
+            <a class='lore2'href="">登录</a>
+        </div>
+    </header>
+
+</div>
+<!--jquery-->
+
+<script>
+//    var lis=document.getElementById('menu').getElementsByTagName('li');
+//    var tab=document.getElementsByClassName('dropdown-menu');
+//    for(var i=0;i<3;i++){
+//        lis[i].xuhao=i;
+//        lis[i].onmouseover=function () {
+//            for(var j=0;j<tab.length;j++){
+//                tab[j].style.display='none'
+//            }
+//            tab[this.xuhao].style.display='block';
+//        }
+//
+//    }
+      $(function () {
+//          给浏览器加滚动条事件
+          $(window).scroll(function () {
+//              获得当前已经滚动上去的距离
+              var t=$(document).scrollTop();
+              if(t>70){
+                $("#header_container").addClass('scrolls')
+              }else {
+                 $("#header_container").removeClass('scrolls')
+              }
+
+          })
+      })
+
+
+
+   
+    $(function () {
+        $("#menu .mmm").hover(function () {
+            $(this).children('ul').show();
+        },function () {
+            $(this).children('ul').hide();
+
+
+
+        })
+    })
+
+
+
+</script>
+
+<!--标题栏结束-->
+
+<!--轮播图-->
+<div id="hh_container">
+
+    <div id="navs" class="jumbotron">
+        <!--第一张-->
+        <img style ='display:block'src="./image/nav1.jpg">
+        <div class="content">
+                <h1>一个软件解决所有开店需求</h1>
+                <h6>收银记账 · 进销存 · 顾客管理 · 会员营销 · 微店</h6>
+                <a href="">立即注册</a>
+        </div>
+        <!--第2张-->
+        <img src="./image/nav2.jpg">
+        <div class="content">
+                <h1>一个软件解决所有开店需求</h1>
+                <h6>收银记账 · 进销存 · 顾客管理 · 会员营销 · 微店</h6>
+                <a href="">立即注册</a>
+        </div>
+        <!--第三章-->
+        <img src="./image/nav3.jpg">
+        <div class="content">
+                <h1>一个软件解决所有开店需求</h1>
+                <h6>收银记账 · 进销存 · 顾客管理 · 会员营销 · 微店</h6>
+                <a href="">立即注册</a>
+        </div>
+
+        <!--第四张-->
+        <img src="./image/nav4.jpg">
+        <div class="content">
+                <h1>一个软件解决所有开店需求</h1>
+                <h6>收银记账 · 进销存 · 顾客管理 · 会员营销 · 微店</h6>
+                <a href="">立即注册</a>
+        </div>
+        <!--第五张-->
+        <img src="./image/nav5.jpg">
+        <div class="content">
+                <h1>一个软件解决所有开店需求</h1>
+                <h6>收银记账 · 进销存 · 顾客管理 · 会员营销 · 微店</h6>
+                <a href="">立即注册</a>
+        </div>
+    </div>
+
+
+    <ul>
+        <li style="background: white"></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    
+    <!--轮播图结束-->
+
+</div>
+<!--//轮播图jquery-->
+<script>
+
+    $(function () {
+        var c=0;
+        function run() {
+            c++;
+//            三元表达式
+            c=(c==5)?0:c;
+//          让c号图片显示，兄弟图片隐藏
+//          $("#navs img").eq(c).show();
+//          $("#navs img").eq(c).siblings('img').hide();
+//          链式操作
+//          让c号图片显示，兄弟图片隐藏
+            $("#navs img").eq(c).fadeIn(1250).siblings('img').fadeOut(1250);
+            $("#hh_container ul li").eq(c).css({'background':'white'}).siblings(c).css({'background':'none'})
+        }
+//        设置定时器
+        var timer=setInterval(run,2500)
+
+//    鼠标移入
+    $("#hh_container ul li").mouseenter(function () {
+        var jqthis=$(this);
+//      停止定时器
+        clearInterval(timer);
+        tt=setTimeout(function () {
+//       获得移入的li的序号,获得当前对象在兄弟元素的序号,如果$this写在定时器里，那么$this指向的就是定时器
+            c = jqthis.index();
+//       链式操作
+//       让c号图片显示 ，兄弟图片隐藏,stop()能够停止当前正在执行的动画
+            $("#navs img").eq(c).stop().fadeIn(1250).siblings('img').stop().fadeOut(1250);
+            $("#hh_container ul li").eq(c).css({'background': 'white'}).siblings(c).css({'background': 'none'});
+
+        },200)
+    })
+//    鼠标移出
+    $("#hh_container ul li").mouseleave(function () {
+//        清理定时炸弹
+        clearTimeout(tt);
+//        恢复定时器，全局变量
+        timer=setInterval(run,2500);
+    })
+})
+
+
+
+
+    //轮播图jquery结束
+</script>
+
+    <!--三个特点-->
+<div id="three_point">
+    <div id="text_left">
+        <img src="./image/point1.png" >
+        <h5>基础功能免费</h5>
+        <p>支持实体店各类日常管理，不花钱<br>也能用上好软件。</p>
+    </div>
+    <div id="text_center">
+        <img src="./image/point2.png" >
+        <h5>全部行业适用</h5>
+        <p>你身边的服装店、日化店、商超百货、美容美<br>发店，还有更多行业，都在使用生意专家。</p>
+    </div>
+    <div id="text_right">
+        <img src="./image/point3.png" >
+        <h5>营业额飙升</h5>
+        <p>多种营销工具，帮你拓客锁客。用过的老板表示：<br>营业额轻轻松松涨了30%。</p>
+    </div>
+</div>
+    <!--三个特点结束-->
+<!--店铺管理-->
+    <div id="shop_manage">
+        <div id="manage_container">
+            <div id="manage_left">
+                <h5>店铺管理</h5>
+                <a href="">
+                    <dl id="shouyin">
+                        <dt>收银记账</dt>
+                        <dd>清楚每一笔销售，是开始好生意的第一步。</dd>
+                    </dl>
+                </a>
+
+                <a href="">
+                    <dl id="product">
+                        <dt>商品管理</dt>
+                        <dd>货品成千上万，照样轻松管理。</dd>
+                    </dl>
+                </a>
+
+                <a href="">
+                    <dl id="vip">
+                        <dt>会员管理</dt>
+                        <dd>留下顾客信息，开展营销，回头客源源不断。</dd>
+                    </dl>
+                </a>
+
+                <a href="">
+                    <dl id="liansuo">
+                        <dt>连锁店管理</dt>
+                        <dd>店铺间会员、优惠券等互通，全局管理一步到位。</dd>
+                    </dl>
+                </a>
+                <a id="more" href="">了解更多 > </a>
+            </div>
+            <img id='manage_right'src="./image/manage_right.png" >
+        </div>
+
+    </div>
+<!--店铺管理结束-->
+
+    <!--会员营销-->
+    <div id="bg_floor">
+        <div id="number_container">
+            <div id="pic_container">
+                <div id="number_pic">
+                    <img style='display: block'src="./image/tab-1.png" ><img src="./image/tab-2.png" ><img src="./image/tab-3.png"><img src="./image/tab-4.png">
+                </div>
+            </div>
+
+
+            <div id="number_yingxiao">
+                <div id="yingxiao">
+                    <h5>会员营销</h5>
+                    <ul id="yingxiao_text">
+                        <li class="yxtab" style="border: 1px solid white;background: #ffc47f">
+                            <a href="#">
+                                <dl id="icons-s-1">
+                                    <dt>短信营销</dt>
+                                    <dd>到达率98%，经久不衰的营销工具。</dd>
+                                </dl>
+                            </a>
+                        </li >
+                        <li class="yxtab">
+                            <a href="">
+                                <dl id="icons-s-2">
+                                    <dt>微信营销</dt>
+                                    <dd>打通你的微信公众号，立即拥有微店。</dd>
+                                </dl>
+                            </a>
+                        </li>
+                        <li class="yxtab">
+                            <a href="">
+                                <dl id="icons-s-3">
+                                    <dt>手机橱窗</dt>
+                                    <dd>到你的第二个门面，顾客在手机上付款选购。</dd>
+                                </dl>
+                            </a>
+                        </li>
+                        <li class="yxtab">
+                            <a href="">
+                                <dl id="icons-s-4">
+                                    <dt>优惠券</dt>
+                                    <dd>主动突击，精准推荐，让顾客回头不再困难。</dd>
+                                </dl>
+                            </a>
+                        </li>
+                        <a id="more2" href="">了解更多></a>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+<!--jquery-->
+<script>
+
+$(function () {
+    $("#bg_floor ul li").mouseenter(function () {
+//        获取当前被触摸的li的序号
+        c=$(this).index();
+        var top=c*-480;
+        $("#number_pic").stop().animate({'top':+top+'px'},300);
+
+        $(this).css({'border':'1px solid white','background':'#ffc47f'}).siblings('li').css({'border':'none','background':'none'})
+    })
+})
+</script>
+
+
+<!--会员营销结束-->
+
+<section>
+    <div id="section_container">
+        <h4>超过500,000商户使用生意专家管理进销存、会员和营销</h4>
+        <div id="selection">
+            <div id="cols1">
+                <div id="cols1_top">
+                    <a href="javascript: void(0);">
+                        <img src="./image/cols1top.png" alt="">
+                    </a>
+                </div>
+                <div id="cols1_bottom">
+                    <a href="javascript: void(0)">
+                        <img src="./image/cols1bottom.png" alt="">
+                    </a>
+                </div>
+            </div>
+            <div id="cols2">
+                <div id="cols2_top">
+                    <a href="javascript: void(0)">
+                        <img src="./image/cols2top.png" alt="">
+                    </a>
+                </div>
+                <div id="cols2_bottom">
+                    <a href="javascript: void(0)">
+                        <img src="./image/cols2bottom.png" alt="">
+                    </a>
+                </div>
+            </div>
+            <div id="cols3">
+                <div id="cols3_top">
+                    <a href="javascript: void(0)">
+                        <img src="./image/cols3top.png" alt="">
+                    </a>
+                </div>
+                <div id="cols3_bottom">
+                    <a href="javascript: void(0)">
+                        <img src="./image/cols3bottom.png" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div id="select_regist">
+            <h2>它简单实用，功能强大，正是您需要的！ <a href="">立即注册</a></h2>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div id="footer_container">
+        <div id="footer_left">
+            <div id="call">
+                <img id="phone" src="./image/phone.png" alt="">
+                <p><img src="./image/icon-phone.png" alt=""><span>全国客服热线</span></p>
+                <div class="logo">
+                    <div id="qq">
+                        <a href="">
+                            <img src="./image/qq.png" alt="">
+                        </a>
+                    </div>
+                    <div id="wechat">
+                        <a href="">
+                            <img src="./image/wechat.png" alt="">
+                        </a>
+                    </div>
+                    <div id="weibo">
+                        <a href="">
+                            <img src="./image/sina.png" alt="">
+                        </a>
+                    </div>
+                    <div id="tencent">
+                        <a href="">
+                            <img src="./image/tencent.png" alt="">
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div id="footer_right">
+            <div class="right_container">
+                <div id="right_col1"class="rightcol">
+                    <dl>
+                        <dt><a href="">店铺管理</a></dt>
+                        <dd><a href="">收银记账</a></dd>
+                        <dd><a href="">商品管理</a></dd>
+                        <dd><a href="">会员管理</a></dd>
+                        <dd><a href="">连锁店管理</a></dd>
+                    </dl>
+                </div>
+                <div id="right_col2"class="rightcol">
+                    <dl>
+                        <dt><a href="">会员营销</a></dt>
+                        <dd><a href="">短信营销</a></dd>
+                        <dd><a href="">手机橱窗</a></dd>
+                        <dd><a href="">微信营销</a></dd>
+                        <dd><a href="">优惠券</a></dd>
+                    </dl>
+                </div>
+                <div id="right_col3"class="rightcol">
+                    <dl>
+                        <dt><a href="">生意专家</a></dt>
+                        <dd><a href="">关于我们</a></dd>
+                        <dd><a href="">工作机会</a></dd>
+                        <dd><a href="">用户故事</a></dd>
+                        <dd><a href="">价格资费</a></dd>
+                    </dl>
+                </div>
+                <div id="right_col4"class="rightcol">
+                    <dl>
+                        <dt><a href="">自助服务</a></dt>
+                        <dd><a href="">开店论坛</a></dd>
+                        <dd><a href="">常见问题</a></dd>
+                        <dd><a href="">权益保障</a></dd>
+                        <dd><a href="">所有功能</a></dd>
+                    </dl>
+                </div>
+                <div id="right_col5"class="rightcol">
+                    <dl>
+                        <dt><a href="">合作运营</a></dt>
+                        <dd><a href="">企业连锁用户专区</a></dd>
+                        <dd><a href="">服务上招聘</a></dd>
+                        <dd><a href="">生意开放平台</a></dd>
+                        <dd><a href="">了解生意专家</a></dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+      
+        <div id="footer_bottom">
+            <p id="jianjie1">© 2010-2018 生意专家™ <span id="jj1"><a href="">服务条款</a></span><span id="jj2">&nbsp;<a href="">隐私政策</a></span>&nbsp;<span id="jj3"><a href="">网站地图</a></span></p>
+            <p id="jianjie2">
+                上海圆贝信息科技有限公司 新ICP备10003729号-1
+            </p>
+        </div>
+    </div>
+</footer>
+
+
+
+<!-- jQuery (Bootstrap 的 JavaScript 插件需要引入 jQuery) -->
+<script src="https://code.jquery.com/jquery.js"></script>
+<!-- 包括所有已编译的插件 -->
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>
